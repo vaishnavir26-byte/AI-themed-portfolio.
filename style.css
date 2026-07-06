@@ -1,0 +1,183 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+body {
+  background: #050816;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* BACKGROUND GLOWS */
+.glow {
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  filter: blur(120px);
+  opacity: 0.4;
+  z-index: -1;
+  animation: float 10s infinite ease-in-out;
+}
+
+.glow1 { background: cyan; top: -100px; left: -100px; }
+.glow2 { background: #0066ff; bottom: -100px; right: -100px; }
+.glow3 { background: #00ff99; top: 40%; left: 40%; }
+
+@keyframes float {
+  0% { transform: translate(0,0); }
+  50% { transform: translate(50px,-40px); }
+  100% { transform: translate(-30px,30px); }
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h1 {
+  color: cyan;
+  text-shadow: 0 0 20px cyan;
+  font-size: 3rem;
+}
+
+.typing {
+  color: #00ffcc;
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: cyan;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* SECTIONS */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+h2 {
+  color: cyan;
+  margin-bottom: 20px;
+}
+
+/* CARDS */
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border: 1px solid cyan;
+  border-radius: 12px;
+  margin: 10px auto;
+  max-width: 500px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px cyan;
+}
+
+/* GRID */
+.grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* SKILLS */
+.skill {
+  width: 60%;
+  margin: 20px auto;
+}
+
+.bar {
+  height: 10px;
+  background: #222;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 10px;
+  background: cyan;
+}
+
+.java { width: 90%; }
+.cpp { width: 88%; }
+.js { width: 80%; }
+.py { width: 78%; }
+.ai { width: 75%; }
+.social-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.social-card {
+  text-align: center;
+  width: 300px;
+  padding: 25px;
+}
+
+/* GITHUB BUTTON */
+.github-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: #24292e;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0 0 15px rgba(255,255,255,0.1);
+}
+
+.github-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255,255,255,0.3);
+}
+
+/* LINKEDIN BUTTON */
+.linkedin-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: #0a66c2;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0 0 15px rgba(10,102,194,0.5);
+}
+
+.linkedin-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(10,102,194,0.8);
+}
+.social-card a {
+  position: relative;
+  z-index: 10;
+  display: inline-block;
+  padding: 10px 15px;
+  background: cyan;
+  color: black;
+  text-decoration: none;
+  border-radius: 8px;
+}
